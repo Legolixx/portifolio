@@ -1,5 +1,4 @@
 import DevImg from "./DevImg";
-import Image from "next/image";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 
 import {
@@ -93,42 +92,7 @@ const qualificationData: QualificationItem[] = [
   },
 ];
 
-const skillData: SkillItem[] = [
-  {
-    title: "skills",
-    data: [
-      {
-        name: "HTML, CSS",
-      },
-      {
-        name: "Front-end Development",
-      },
-      {
-        name: "Javascript",
-      },
-      {
-        name: "Back-end Development",
-      },
-    ],
-  },
-  {
-    title: "tools",
-    data: [
-      {
-        imgPath: "/about/vscode.svg",
-      },
-      {
-        imgPath: "/about/figma.svg",
-      },
-      {
-        imgPath: "/about/notion.svg",
-      },
-      {
-        imgPath: "/about/wordpress.svg",
-      },
-    ],
-  },
-];
+
 
 const getData = (arr: AboutData[], title: string) => {
   return arr.find((item) => item.title === title);
