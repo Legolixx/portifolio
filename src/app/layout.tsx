@@ -1,25 +1,16 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ThemeProvider } from "@/components/ThemeProvider";
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+import { Outfit } from "next/font/google";
 
 export const metadata: Metadata = {
   title: "Victor Fazekas",
   description: "My personal Portifolio",
 };
+
+const outfit = Outfit({ subsets: ["latin"] });
 
 export default function RootLayout({
   children,
@@ -29,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${outfit.className} antialiased`}
       >
         <ThemeProvider attribute="class" defaultTheme="system">
           <Header />
