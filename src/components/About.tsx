@@ -1,5 +1,5 @@
-import Image from "next/image";
 import DevImg from "./DevImg";
+import Image from "next/image";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 
 import {
@@ -129,6 +129,8 @@ const skillData: SkillItem[] = [
     ],
   },
 ];
+
+
 
 const getData = (arr: AboutData[], title: string) => {
   return arr.find((item) => item.title === title);
