@@ -69,7 +69,7 @@ const Work = () => {
             <Button>All projects</Button>
           </Link>
         </div>
-        <div className="xl:max-w-[1000px] xl:absolute right-0 top-0">
+        <div className="xl:max-w-[1000px] xl:absolute right-0 top-0 xl:pr-10">
           <Swiper
             className="h-[480px]"
             slidesPerView={1}
