@@ -4,36 +4,44 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { User, MailIcon, ArrowRightIcon, MessageSquare } from "lucide-react";
+import {
+  User,
+  MailIcon,
+  ArrowRightIcon,
+  MessageSquare,
+  LoaderCircle,
+} from "lucide-react";
 import { sendEmail } from "@/actions/sendEmail";
-import { useFormStatus } from "react-dom";
 import { useToast } from "@/hooks/use-toast";
-import React from "react";
+import React, { useState } from "react";
 
 const Form = () => {
   const { toast } = useToast();
+  const [pending, setPending] = useState(false);
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    setPending(true);
     const form = event.currentTarget;
     const formData = new FormData(form);
 
     const { error } = await sendEmail(formData);
+
     if (error) {
       toast({
         title: "Error",
         description: error,
         variant: "destructive",
       });
-      return;
+      return setPending(false);
     }
 
     toast({
       title: "Success",
       description: "Email sent",
     });
-
     form.reset();
+    setPending(false);
   };
 
   return (
@@ -50,23 +58,33 @@ const Form = () => {
         <Textarea name="message" placeholder="Type Your Message Here." />
         <MessageSquare className="absolute top-4 right-6" size={20} />
       </div>
-      <SubmitButton />
+      <SubmitButton pending={pending} />
     </form>
   );
 };
 
 export default Form;
 
-function SubmitButton() {
-  const { pending } = useFormStatus();
+
+
+function SubmitButton({ pending }: { pending: boolean }) {
   return (
     <Button
       className="flex gap-x-2 items-center justify-center h-[54px] rounded-full max-w-[166px]"
       type="submit"
       disabled={pending}
     >
-      {pending ? "Sending..." : "Send Email"}
-      <ArrowRightIcon size={16} />
+      {pending ? (
+        <>
+          Sending
+          <LoaderCircle className="animate-spin" size={16} />
+        </>
+      ) : (
+        <>
+          Send Email
+          <ArrowRightIcon size={16} />
+        </>
+      )}
     </Button>
   );
 }
