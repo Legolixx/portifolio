@@ -5,28 +5,68 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { User, MailIcon, ArrowRightIcon, MessageSquare } from "lucide-react";
+import { sendEmail } from "@/actions/sendEmail";
+import { useFormStatus } from "react-dom";
+import { useToast } from "@/hooks/use-toast";
+import React from "react";
 
 const Form = () => {
+  const { toast } = useToast();
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
+    const { error } = await sendEmail(formData);
+    if (error) {
+      toast({
+        title: "Error",
+        description: error,
+        variant: "destructive",
+      });
+      return;
+    }
+
+    toast({
+      title: "Success",
+      description: "Email sent",
+    });
+
+    form.reset();
+  };
+
   return (
-    <form className="flex flex-col gap-y-4">
+    <form onSubmit={handleSubmit} className="flex flex-col gap-y-4">
       <div className="relative flex items-center">
-        <Input type="name" id="name" placeholder="Name" />
+        <Input type="text" name="Name" placeholder="Name" />
         <User className="absolute right-6" size={20} />
       </div>
       <div className="relative flex items-center">
-        <Input type="email" id="email" placeholder="Email" />
+        <Input type="email" name="senderEmail" placeholder="Email" />
         <MailIcon className="absolute right-6" size={20} />
       </div>
       <div className="relative flex items-center">
-        <Textarea id="message" placeholder="Type Your Message Here." />
+        <Textarea name="message" placeholder="Type Your Message Here." />
         <MessageSquare className="absolute top-4 right-6" size={20} />
       </div>
-      <Button className="flex items-center gap-x-2 max-w-[166px]">
-        Let's Talk
-        <ArrowRightIcon size={20} />
-      </Button>
+      <SubmitButton />
     </form>
   );
 };
 
 export default Form;
+
+function SubmitButton() {
+  const { pending } = useFormStatus();
+  return (
+    <Button
+      className="flex gap-x-2 items-center justify-center"
+      type="submit"
+      disabled={pending}
+    >
+      {pending ? "Saving..." : "Save"}
+      <ArrowRightIcon size={16} />
+    </Button>
+  );
+}

@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import Form from "@/components/Form";
+import FormEmail from "@/components/Form";
 import { MailIcon, HomeIcon, PhoneCall } from "lucide-react";
 
 const ContactPage = () => {
@@ -35,7 +35,7 @@ const ContactPage = () => {
               <div>+55 81 99658-0195</div>
             </div>
           </div>
-          <Form />
+          <FormEmail />
         </div>
       </div>
     </section>

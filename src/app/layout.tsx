@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { Toaster } from "@/components/ui/toaster";
 import { Outfit } from "next/font/google";
 
 export const metadata: Metadata = {
@@ -23,6 +24,7 @@ export default function RootLayout({
         className={`${outfit.className} antialiased`}
       >
         <ThemeProvider attribute="class" defaultTheme="system">
+          <Toaster />
           <Header />
           {children}
           <Footer />
