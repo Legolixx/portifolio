@@ -40,7 +40,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
           </div>
         </div>
       </CardHeader>
-      <div className="h-full px-8 py-6">
+      <div className="h-full px-8 py-3 xl:py-5">
         <Badge className="uppercase text-sm font-medium mb-2 absolute top-4 left-5">
           {project.category}
         </Badge>
