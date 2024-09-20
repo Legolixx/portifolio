@@ -61,11 +61,11 @@ function SubmitButton() {
   const { pending } = useFormStatus();
   return (
     <Button
-      className="flex gap-x-2 items-center justify-center"
+      className="flex gap-x-2 items-center justify-center h-[54px] rounded-full max-w-[166px]"
       type="submit"
       disabled={pending}
     >
-      {pending ? "Saving..." : "Save"}
+      {pending ? "Sending..." : "Send Email"}
       <ArrowRightIcon size={16} />
     </Button>
   );
