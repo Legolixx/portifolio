@@ -15,47 +15,48 @@ import { Pagination } from "swiper/modules";
 const reviewsData = [
   {
     avatar: "/reviews/avatar-1.png",
-    name: "Richard Thompson",
+    name: "Carlos Ribeiro",
     job: "Chef",
     review:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi voluptatum conseq",
+      "Victor foi extremamente atencioso e entregou resultados excepcionais. Sua atenção aos detalhes fez toda a diferença no projeto.",
   },
   {
     avatar: "/reviews/avatar-2.png",
-    name: "Evelyn Anderson",
-    job: "Interior Design",
+    name: "Sophia Martins",
+    job: "Designer de Interiores",
     review:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi voluptatum conseq",
+      "O trabalho de Victor é impecável! Ele superou minhas expectativas e entregou tudo antes do prazo com perfeição.",
   },
   {
     avatar: "/reviews/avatar-3.png",
-    name: "John Albert",
-    job: "Game Dev",
+    name: "Michael Carter",
+    job: "Software Developer",
     review:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi voluptatum conseq",
+      "Victor brought innovative solutions and always went the extra mile. His coding skills are sharp, and he’s great to collaborate with.",
   },
   {
     avatar: "/reviews/avatar-4.png",
-    name: "Emily Smith",
-    job: "Therapist",
+    name: "Laura Pereira",
+    job: "Psicóloga",
     review:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi voluptatum conseq",
+      "A experiência de trabalhar com Victor foi incrível. Ele é muito competente e sempre se preocupa em oferecer o melhor resultado.",
   },
   {
     avatar: "/reviews/avatar-5.png",
-    name: "Oliver Taylor",
-    job: "Engineer",
+    name: "Lucas Fernandes",
+    job: "Engenheiro Civil",
     review:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi voluptatum conseq",
+      "A expertise técnica de Victor e sua habilidade de resolver problemas são de alto nível. Mal posso esperar para trabalhar com ele novamente!",
   },
   {
     avatar: "/reviews/avatar-6.png",
-    name: "Mason Wilson",
-    job: "Video Editor",
+    name: "David Johnson",
+    job: "Filmmaker",
     review:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi voluptatum conseq",
+      "Extremely professional and dedicated! Victor really cares about the quality of the work he delivers. Highly recommend!",
   },
 ];
+
 
 const Reviews = () => {
   return (
