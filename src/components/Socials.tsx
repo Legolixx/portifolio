@@ -8,27 +8,29 @@ import {
   RiInstagramFill,
 } from "react-icons/ri";
 
+
+
 import Link from "next/link";
 
 const icons = [
   {
-    path: "/",
+    path: "https://www.youtube.com/user/fazekas100",
     name: <RiYoutubeFill />,
   },
   {
-    path: "/",
+    path: "https://br.linkedin.com/in/victor-fazekas",
     name: <RiLinkedinFill />,
   },
   {
-    path: "/",
+    path: "https://github.com/Legolixx",
     name: <RiGithubFill />,
   },
   {
-    path: "/",
+    path: "https://www.facebook.com/victor.fazekas.9",
     name: <RiFacebookFill />,
   },
   {
-    path: "/",
+    path: "https://www.instagram.com/vfazekass/",
     name: <RiInstagramFill />,
   },
 ];
