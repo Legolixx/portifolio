@@ -7,38 +7,38 @@ import ProjectCard from "@/components/ProjectCard";
 const projectData = [
   {
     image: "/work/3.png",
-    category: "react js",
-    name: "Nexa Website",
+    category: "Next js",
+    name: "SmartFinances",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur ",
-    link: "/",
+      "A finance management app helping users track expenses and set budgets effectively.",
+    link: "/projects",
     github: "/",
   },
   {
     image: "/work/4.png",
-    category: "react js",
-    name: "Nexa Website",
+    category: "Next js",
+    name: "Pate Hyundai Warranty System",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur ",
-    link: "/",
+      "A SaaS tool simplifying warranty management for car dealerships.",
+    link: "/projects",
     github: "/",
   },
   {
     image: "/work/2.png",
-    category: "next js",
-    name: "Nexa Website",
+    category: "React js",
+    name: "Ecommerce Platform",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur ",
-    link: "/",
+      "A modern and scalable platform designed for seamless online shopping experiences.",
+    link: "/projects",
     github: "/",
   },
   {
     image: "/work/1.png",
-    category: "next js",
-    name: "Nexa Website",
+    category: "Next js",
+    name: "ESG System for MTR Control",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur ",
-    link: "/",
+      "A system developed to monitor and manage the Material Transfer Record (MTR) as part of a company's ESG initiatives.",
+    link: "/projects",
     github: "/",
   },
 ];

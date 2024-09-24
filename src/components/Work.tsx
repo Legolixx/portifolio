@@ -19,38 +19,38 @@ interface DataProject {
 const projectData = [
   {
     image: "/work/3.png",
-    category: "react js",
-    name: "Nexa Website",
+    category: "Next js",
+    name: "SmartFinances",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur ",
-    link: "/",
+      "A finance management app helping users track expenses and set budgets effectively.",
+    link: "/projects",
     github: "/",
   },
   {
     image: "/work/4.png",
-    category: "react js",
-    name: "Nexa Website",
+    category: "Next js",
+    name: "Pate Hyundai Warranty System",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur ",
-    link: "/",
+      "A SaaS tool simplifying warranty management for car dealerships.",
+    link: "/projects",
     github: "/",
   },
   {
     image: "/work/2.png",
-    category: "next js",
-    name: "Nexa Website",
+    category: "React js",
+    name: "Ecommerce Platform",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur ",
-    link: "/",
+      "A modern and scalable platform designed for seamless online shopping experiences.",
+    link: "/projects",
     github: "/",
   },
   {
     image: "/work/1.png",
     category: "next js",
-    name: "Nexa Website",
+    name: "ESG System for MTR Control",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur ",
-    link: "/",
+      "Manage the Material Transfer Record (MTR) as part of a company's ESG initiatives.",
+    link: "/projects",
     github: "/",
   },
 ];
@@ -62,8 +62,9 @@ const Work = () => {
         <div className="max-w-[400px] mx-auto xl:mx-0 text-center xl:text-left mb-12 xl:h-[400px] flex flex-col justify-center items-center xl:items-start">
           <h2 className="section-title mb-4">Latest Projects</h2>
           <p className="subtitle mb-8">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi
-            excepturi placeat quidem, at voluptatibus voluptatem consequatur.
+            I am constantly working on exciting projects that blend technology,
+            creativity, and problem-solving. Here’s a glimpse of some of my most
+            recent work:
           </p>
           <Link href="/projects">
             <Button>All projects</Button>
@@ -85,7 +86,7 @@ const Work = () => {
             {projectData.slice(0, 4).map((project: DataProject, index) => {
               return (
                 <SwiperSlide key={index}>
-                 <ProjectCard project={project} />
+                  <ProjectCard project={project} />
                 </SwiperSlide>
               );
             })}
