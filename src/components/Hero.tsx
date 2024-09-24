@@ -43,7 +43,7 @@ const Hero = () => {
 
             <Socials
               containerStyles="flex gap-x-6 mx-auto xl:mx-0"
-              iconsStyles="text-foreground text-[22px] hover:text-primary transition-all"
+              iconsStyles="text-foreground text-[22px] text-primary transition-all hover:text-blue-950"
             />
           </div>
           <div className="hidden xl:flex relative">

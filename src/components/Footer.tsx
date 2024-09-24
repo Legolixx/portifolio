@@ -10,7 +10,7 @@ const Footer = () => {
             iconsStyles="text-primary text-[20px] dark:text-white/70 hover:text-black dark:hover:text-primary transition-all"
           />
           <div className="text-muted-foreground">
-            Copyright &copy; Victor Fazekas. All rights reserved.
+             &copy; {" "} Copyright {new Date().getFullYear()} Victor Fazekas. All rights reserved.
           </div>
         </div>
       </div>
