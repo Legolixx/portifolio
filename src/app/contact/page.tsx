@@ -14,8 +14,8 @@ const ContactPage = () => {
             </div>
             <h1 className="h1 max-w-md mb-8">Let's Work together.</h1>
             <p className="subtitle max-w-[400px]">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptates officia, tempore enim beatae.
+              I’m always excited to collaborate on new and challenging projects.
+              Feel free to reach out, and let’s create something amazing!
             </p>
           </div>
           <div className="hidden xl:flex w-full bg-contact_illustration_light dark:bg-contact_illustration_dark bg-contain bg-top bg-no-repeat"></div>
