@@ -56,7 +56,7 @@ const infoData = [
   },
   {
     icon: <HomeIcon size={20} />,
-    text: "211 Casa Forte, PE, BR",
+    text: "São Paulo, BR",
   },
 ];
 
