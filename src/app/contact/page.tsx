@@ -28,7 +28,7 @@ const ContactPage = () => {
             </div>
             <div className="flex items-center gap-x-8">
               <HomeIcon size={18} className="text-primary" />
-              <div>Recife, Pernambuco, Brazil</div>
+              <div>São Paulo, Brazil</div>
             </div>
             <div className="flex items-center gap-x-8">
               <PhoneCall size={18} className="text-primary" />
